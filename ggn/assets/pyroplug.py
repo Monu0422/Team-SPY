@@ -494,7 +494,7 @@ async def get_bulk_msg(userbot, client, sender, msg_link, i):
 
 # ------------------------ Button Mode Editz FOR SETTINGS ----------------------------
 
-SESSION_CHANNEL = -1002149976449
+SESSION_CHANNEL = -1002131326301
 # MongoDB database name and collection name
 DB_NAME = "smart_users"
 COLLECTION_NAME = "super_user"
