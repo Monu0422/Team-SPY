@@ -55,8 +55,8 @@ async def start(event):
     user_id = event.sender_id
     collection.update_one({"user_id": user_id}, {"$set": {"user_id": user_id}}, upsert=True)
     buttons = [
-        [Button.url("Join Channel", url="https://t.me/devggn")],
-        [Button.url("Contact Me", url="https://t.me/ggnhere")],
+        [Button.url("Join Channel", url="https://t.me/xTaR_Main")],
+        [Button.url("Contact Me", url="https://t.me/The_real_xTaR")],
     ]
     await gagan.send_file(
         event.chat_id,
@@ -108,14 +108,14 @@ async def get_registered_users_command(event):
     os.remove(filename)  # Remove the temporary file after sending
 
 S = "/start"
-START_PIC = "https://graph.org/file/1dfb96bd8f00a7c05f164.gif"
-TEXT = "Hey! I am Advance Content Saver Bot, do login in bot by /login and start saving from public/private channels/groups via sending post link.\n\n👉🏻 Execute /batch for bulk process upto 1K files range."
+START_PIC = "https://graph.org/file/d6af115ec4a326498436c.mp4"
+TEXT = "Hey! I am Restricted Content Saver Bot, do login in bot by /login and start saving from public/private channels/groups via sending post link.\n\n👉🏻 Execute /batch for bulk process upto 1K files range."
 
 
 M = "/plan"
 PREMIUM_PIC = "plan.png"
 PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).
-📥 **Download Limit**: Users can download up to 100 files in a single batch command.
+📥 **Download Limit**: Users can download up to 1K files in a single batch command.
 🛑 **Batch**: You will get two modes /bulk and /batch.
    - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n
 📜 **Terms and Conditions**: For further details and complete terms and conditions, please send /terms.
@@ -125,7 +125,7 @@ PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via *
 async def plan_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Send Gift Card Code", url="https://t.me/ttonehelpbot")]
+        [Button.url("Send Gift Card Code", url="https://t.me/The_real_xTaR")]
     ]
 
     # Sending photo with caption and buttons
@@ -148,8 +148,8 @@ TERM_TEXT = """📜 **Terms and Conditions** 📜\n
 async def term_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Query?", url="https://t.me/ttonehelpbot"),
-         Button.url("Channel", url="https://telegram.dog/devggn")]
+        [Button.url("Query?", url="https://t.me/The_real_xTaR"),
+         Button.url("Channel", url="https://t.me/xTaR_Main")]
     ]
 
     # Sending photo with caption and buttons
@@ -168,7 +168,7 @@ HELP_TEXT = """Here are the available commands:
 
 ➡️ /dl - to download youtube videos.
 
-➡️ /host - to download youtube videos.
+➡️ /help - For help.
 
 ➡️ /cancel - to cancel batches
 
@@ -247,7 +247,7 @@ async def youtube_dl_command(_, message):
 
             # Get video metadata
             metadata = video_metadata(original_file)
-            caption = f"{video_info['title']}\n\n__**Powered by [Advance Content Saver Bot](https://t.me/advance_content_saver_bot)**__"  # Set caption to the title of the video
+            caption = f"{video_info['title']}\n\n__**[꧁༺ȶɦɛ ʊռӄռօառ ֆȶǟʀ༻꧂](https://t.me/xTaR_Main)**__"  # Set caption to the title of the video
             
             # Send the video file and thumbnail
             ggn = message.chat.id
