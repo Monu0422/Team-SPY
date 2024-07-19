@@ -605,7 +605,7 @@ async def set_rename_command(user_id, custom_rename_tag):
 
 # Function to get the user's custom renaming preference
 def get_user_rename_preference(user_id):
-    # Retrieve the user's custom renaming tag if set, or default to '@devggn'
+    # Retrieve the user's custom renaming tag if set, or default to '@imxtar'
     return user_rename_preferences.get(str(user_id), '@devggn')
 
 # Function to set custom caption preference
@@ -665,9 +665,9 @@ async def callback_query_handler(event):
         await event.respond("Send me the replacement words in the format: 'WORD(s)' 'REPLACEWORD'")
         sessions[user_id] = 'setreplacement'
 
-    #elif event.data == b'addsession':
-       # await event.respond("This method depreciated ... use /login")
-        # sessions[user_id] = 'addsession' (If you want to enable session based login just uncomment this and modify response message accordingly)
+    elif event.data == b'addsession':
+        await event.respond("This method Follow ... use /addsession")
+         sessions[user_id] = 'addsession' (If you want to enable session based login just uncomment this and modify response message accordingly)
 
     elif event.data == b'delete':
         await event.respond("Send words seperated by space to delete them from caption/filename ...")
