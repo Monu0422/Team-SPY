@@ -41,7 +41,7 @@ async def copy_message_with_chat_id(client, sender, chat_id, message_id):
         for word, replace_word in replacements.items():
             final_caption = final_caption.replace(word, replace_word)
         
-        caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[꧁༺ȶɦɛ ʊռӄռօառ ֆȶǟʀ༻꧂](https://t.me/xTaR_Main)**__"
+        caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[ê§à¼ºÈ¶É¦É› ÊŠÕ¼Ó„Õ¼Ö…Õ¡Õ¼ Ö†È¶ÇŸÊ€à¼»ê§‚](https://t.me/xTaR_Main)**__"
         
         if msg.media:
             if msg.media == MessageMediaType.VIDEO:
@@ -112,7 +112,7 @@ async def send_video_with_chat_id(client, sender, path, caption, duration, hi, w
             progress=progress_for_pyrogram,
             progress_args=(
                 client,
-                '**__Uploading: [꧁༺ȶɦɛ ʊռӄռօառ ֆȶǟʀ༻꧂](https://t.me/xTaR_Main)__**\n ',
+                '**__Uploading: [ê§à¼ºÈ¶É¦É› ÊŠÕ¼Ó„Õ¼Ö…Õ¡Õ¼ Ö†È¶ÇŸÊ€à¼»ê§‚](https://t.me/xTaR_Main)__**\n ',
                 upm,
                 time.time()
             )
@@ -146,7 +146,7 @@ async def send_document_with_chat_id(client, sender, path, caption, thumb_path, 
             progress=progress_for_pyrogram,
             progress_args=(
                 client,
-                '**__Uploading:__**\n**__Bot made by [꧁༺ȶɦɛ ʊռӄռօառ ֆȶǟʀ༻꧂](https://t.me/xTaR_Main)__**',
+                '**__Uploading:__**\n**__Bot made by [ê§à¼ºÈ¶É¦É› ÊŠÕ¼Ó„Õ¼Ö…Õ¡Õ¼ Ö†È¶ÇŸÊ€à¼»ê§‚](https://t.me/xTaR_Main)__**',
                 upm,
                 time.time()
             )
@@ -365,7 +365,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 await client.edit_message_text(sender, edit_id, 'poll media cant be saved')
                 return 
             edit = await client.edit_message_text(sender, edit_id, "__**Trying to Download**...")
-            file = await userbot.download_media(msg, progress=progress_for_pyrogram, progress_args=(client, "**__Unrestricting__: __[꧁༺ȶɦɛ ʊռӄռօառ ֆȶǟʀ༻꧂](https://t.me/xTaR_Main)__**\n ", edit, time.time()))            # Retrieve user's custom renaming preference if set, default to '@devggn' otherwise
+            file = await userbot.download_media(msg, progress=progress_for_pyrogram, progress_args=(client, "**__Unrestricting__: __[ê§à¼ºÈ¶É¦É› ÊŠÕ¼Ó„Õ¼Ö…Õ¡Õ¼ Ö†È¶ÇŸÊ€à¼»ê§‚](https://t.me/xTaR_Main)__**\n ", edit, time.time()))            # Retrieve user's custom renaming preference if set, default to '@devggn' otherwise
             if not file:
               await client.send_message(sender, "Failed to download the media.")
               return None
@@ -432,7 +432,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 replacements = load_replacement_words(sender)
                 for word, replace_word in replacements.items():
                     final_caption = final_caption.replace(word, replace_word)
-                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[꧁༺ȶɦɛ ʊռӄռօառ ֆȶǟʀ༻꧂](https://t.me/xTaR_Main)**__"
+                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[ê§à¼ºÈ¶É¦É› ÊŠÕ¼Ó„Õ¼Ö…Õ¡Õ¼ Ö†È¶ÇŸÊ€à¼»ê§‚](https://t.me/xTaR_Main)**__"
                 await send_video_with_chat_id(client, sender, path, caption, duration, hi, wi, thumb_path, upm, msg.pinned_message)
             elif str(file).split(".")[-1] in ['jpg', 'jpeg', 'png', 'webp']:
                 if file_n != '':
@@ -469,7 +469,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 replacements = load_replacement_words(sender)
                 for word, replace_word in replacements.items():
                     final_caption = final_caption.replace(word, replace_word)
-                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[꧁༺ȶɦɛ ʊռӄռօառ ֆȶǟʀ༻꧂](https://t.me/xTaR_Main)**__"
+                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[ê§à¼ºÈ¶É¦É› ÊŠÕ¼Ó„Õ¼Ö…Õ¡Õ¼ Ö†È¶ÇŸÊ€à¼»ê§‚](https://t.me/xTaR_Main)**__"
                 await send_document_with_chat_id(client, sender, path, caption, thumb_path, upm, msg.pinned_message)
                     
             os.remove(file)
@@ -666,8 +666,8 @@ async def callback_query_handler(event):
         sessions[user_id] = 'setreplacement'
 
     elif event.data == b'addsession':
-        await event.respond("This method Follow ... use /addsession")
-         sessions[user_id] = 'addsession' (If you want to enable session based login just uncomment this and modify response message accordingly)
+        await event.respond("This method depreciated ... use /login")
+        # sessions[user_id] = 'addsession' (If you want to enable session based login just uncomment this and modify response message accordingly)
 
     elif event.data == b'delete':
         await event.respond("Send words seperated by space to delete them from caption/filename ...")
