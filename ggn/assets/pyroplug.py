@@ -665,8 +665,8 @@ async def callback_query_handler(event):
         await event.respond("Send me the replacement words in the format: 'WORD(s)' 'REPLACEWORD'")
         sessions[user_id] = 'setreplacement'
 
-    elif event.data == b'addsession':
-        await event.respond("This method depreciated ... use /login")
+    #elif event.data == b'addsession':
+       # await event.respond("This method depreciated ... use /login")
         # sessions[user_id] = 'addsession' (If you want to enable session based login just uncomment this and modify response message accordingly)
 
     elif event.data == b'delete':
